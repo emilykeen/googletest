@@ -9,6 +9,7 @@
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <a href="#" onclick="signOut();">Sign out</a>
     <div class="signedinInfo"></div>
+    <img class = "signedInImage">
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
@@ -18,11 +19,12 @@
         console.log('Full Name: ' + name);
         console.log('Given Name: ' + profile.getGivenName());
         console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
+        var image = profile.getImageUrl();
+        console.log("Image URL: " + image);
         console.log("Email: " + profile.getEmail());
 
         $(".signedinInfo").html(name);
-        //$("signedinInfo").append(profile.getName());
+        $(".signedInImage").attr(src, "name";
 
 
         // The ID token you need to pass to your backend:
